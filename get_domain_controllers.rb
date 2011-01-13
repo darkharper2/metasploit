@@ -8,7 +8,7 @@
 # The registry key it looks for is not there by default on Windows 7 and I can't
 # work out an alternative key at the moment.
 # Also, it uses the netdom command to work out the domain controller which limits
-# this script to Windows Server 2008 unless the admin has installed it. (need to
+# this script to Windows 7/Server 2008 unless the admin has installed it. (need to
 # verify this in lab). Unfortunately the above two things are mutually exclusive
 # at the moment but I'll figure something out.
 #
