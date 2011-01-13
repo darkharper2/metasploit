@@ -1,5 +1,21 @@
 # Author: Dark Harper at darkharper2@gmail.com 
-# ripped off largely from domain_list_users.rb by Carlos Perez
+# Ripped off largely from domain_list_users.rb by Carlos Perez - thank you!
+#
+# This came about from a question on #metasploit where someone wanted to know
+# the domain controllers for a domain on which they had a meterpreter session.
+# NOTE: at the moment it tries to determine the domain from the registry and asks
+# the tester for the domain with the -d flag if it can't find out this way.
+# The registry key it looks for is not there by default on Windows 7 and I can't
+# work out an alternative key at the moment.
+# Also, it uses the netdom command to work out the domain controller which limits
+# this script to Windows Server 2008 unless the admin has installed it. (need to
+# verify this in lab). Unfortunately the above two things are mutually exclusive
+# at the moment but I'll figure something out.
+#
+# I plan to expand this script to use different ways to enumerate the domain 
+# controllers - %LOGONSERVER% for example. I may even go crazy and look at a 
+# wider LDAP query module.
+#
 #-------------------------------------------------------------------------------
 #Set General Variables used in the script
 
